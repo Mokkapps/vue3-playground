@@ -8,7 +8,7 @@
       :alt="article.title"
       class="mb-4"
     />
-    <a class="mb-4 text-2xl" :href="article.url">{{ article.title }}</a>
+    <a class="mb-4 text-2xl" :href="article.url" target="_blank">{{ article.title }}</a>
     <p class="text-sm mb-4">{{ article.description }}</p>
     <span class="italic mb-2 text-xs">
       {{ article.source.name }}

@@ -12,6 +12,7 @@ export default function useAsyncState<T>(
 
     const _promise = typeof promise === "function" ? promise(...args) : promise;
 
+    loading.value = true;
     try {
       const data = await _promise;
       // @ts-ignore

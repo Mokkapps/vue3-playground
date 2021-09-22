@@ -1,7 +1,7 @@
 <template>
-  <p v-if="loading">Loading ...</p>
+  <p class="text-white text-xl" v-if="loading">Loading ...</p>
   <p v-if="error">{{ error.message }}</p>
-  <div class="flex flex-col" v-else>
+  <div class="grid grid-cols-3 gap-4" >
     <Article class="mb-8" v-for="article in articles" :key="article.id" :article="article" />
   </div>
 </template>

@@ -1,8 +1,8 @@
 <template>
-  <p v-if="loading">Loading ...</p>
+  <p class="text-white text-xl" v-if="loading">Loading ...</p>
   <p v-if="error">{{ error.message }}</p>
-  <div class="flex flex-col" v-else>
-    <Article class="mb-8" v-for="article in articles" :key="article.id" :article="article" />
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8" >
+    <Article v-for="article in articles" :key="article.id" :article="article" />
   </div>
 </template>
 
